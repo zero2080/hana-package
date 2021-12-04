@@ -1,0 +1,6 @@
+:api-name: 블로그 업로드
+:api-id: /admin/blog/write
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,request-parameters,request-parts,http-response']

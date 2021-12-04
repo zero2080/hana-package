@@ -1,0 +1,6 @@
+:api-name: 상단 이미지 삭제
+:api-id: /admin/top/delete
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,path-parameters,http-response']

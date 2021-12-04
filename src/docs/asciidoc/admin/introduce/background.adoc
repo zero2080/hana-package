@@ -1,0 +1,7 @@
+:api-name: 소개 이미지
+:api-id: /admin/introduce/background
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,request-parameters,request-parts,http-response']
+

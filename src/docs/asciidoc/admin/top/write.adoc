@@ -1,0 +1,6 @@
+:api-name: 상단 이미지 업로드
+:api-id: /admin/top/write
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,request-parts,http-response']

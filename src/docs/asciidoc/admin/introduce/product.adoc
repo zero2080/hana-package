@@ -1,0 +1,7 @@
+:api-name: 소개 상품 이미지
+:api-id: /admin/introduce/product
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,request-parameters,request-parts,http-response']
+

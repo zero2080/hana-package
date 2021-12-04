@@ -1,0 +1,6 @@
+:api-name: 블로그 삭제
+:api-id: /admin/blog/delete
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,path-parameters,http-response']

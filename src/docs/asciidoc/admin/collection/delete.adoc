@@ -1,0 +1,6 @@
+:api-name: 콜렉션 삭제
+:api-id: /admin/collection/delete
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,path-parameters,http-response']

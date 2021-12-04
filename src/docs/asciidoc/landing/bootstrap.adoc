@@ -1,0 +1,6 @@
+:api-name: 랜딩페이지 데이터요청
+:api-id: /landing/bootstrap
+
+== {api-name}
+
+operation::{api-id}/[snippets='http-request,http-response,response-fields']

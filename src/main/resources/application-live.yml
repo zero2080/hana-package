@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      minimum-idle: 20
+      maximum-pool-size: 50
+      jdbc-url: jdbc:mysql://server-db.c9vq7tfs4ivu.ap-northeast-2.rds.amazonaws.com:3306/hn-package?characterEncoding=UTF-8&useSSL=false
+      username: blackbear2080
+      password: dhqjatn0732
+  flyway:
+    locations: classpath:db/data/common, classpath:db/data/live
+
+ncloud:
+  email:
+    address: 'syoping_baeg@naver.com'
+    url: https://mail.apigw.ntruss.com
+    path: /api/v1/mails

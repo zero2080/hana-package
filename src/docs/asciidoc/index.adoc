@@ -2,18 +2,24 @@
 :icons: font
 :source-highlighter: highlightjs
 :toc: left
-:sectnums:
-:toclevels: 4
+:toclevels: 2
 :leveloffset: 0
-:division: begin
+:sectlinks:
+:sectnums:
+:linkattrs:
+:division: admin
 
 
 = Rest API Guide
 
 [[Resources]]
-== REST API Resources
+= 관리자
 
-include::begin/begin.adoc[]
+include::admin/index.adoc[]
+
+= 랜딩페이지
+
+include::landing/bootstrap.adoc[]
+include::landing/making-request.adoc[]
 
 ---
-

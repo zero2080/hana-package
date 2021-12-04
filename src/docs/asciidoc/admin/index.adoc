@@ -1,0 +1,28 @@
+:api-id: {division}/profile
+
+
+
+== 계정 관리
+
+include::profile/login.adoc[]
+include::profile/change-password.adoc[]
+
+== 상단 이미지
+
+include::top/write.adoc[]
+include::top/delete.adoc[]
+
+== 콜렉션
+
+include::collection/write.adoc[]
+include::collection/delete.adoc[]
+
+== 소개
+
+include::introduce/product.adoc[]
+include::introduce/background.adoc[]
+
+== 블로그
+
+include::blog/write.adoc[]
+include::blog/delete.adoc[]

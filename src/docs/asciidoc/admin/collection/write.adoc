@@ -1,0 +1,6 @@
+:api-name: 콜렉션 업로드
+:api-id: /admin/collection/write
+
+=== {api-name}
+
+operation::{api-id}/[snippets='http-request,request-parameters,request-parts,http-response']
