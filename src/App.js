@@ -2,7 +2,9 @@
 function App() {
   return (
     <div className="App">
-      <h1>하나패키지</h1>
+      <div>
+        <h1>하하하하나 패키지</h1>
+      </div>
     </div>
   );
 }
