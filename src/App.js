@@ -1,10 +1,11 @@
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h1>하하하하나 패키지</h1>
-      </div>
+    <div className="App" style={{minWidth:'720px',maxWidth:"1280px",margin:"0 auto"}}>
+      <NavBar/>
+      <Home/>
     </div>
   );
 }
