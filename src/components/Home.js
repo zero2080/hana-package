@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     width:100%;
     height:500px;
     overflow:hidden;
+    padding-top:180px;
 `;
 
 const Home = (props)=>{
@@ -31,7 +32,7 @@ const Home = (props)=>{
         console.log('click thumb');
     }
 
-    return <Wrapper>
+    return <Wrapper id="home">
         <Carousel showThumbs={false} showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
             {
                 imgArr.map((img,idx)=>{

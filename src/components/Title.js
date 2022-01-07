@@ -4,12 +4,12 @@ const Content = styled.p`
     font-size:32px;
     font-weight:bold;
     text-align:center;
-    margin-top:150px;
+    padding-top:150px;
     margin-bottom:60px;
 `;
 
-const Title = ({title})=>{
-    return <Content>{title}</Content>
+const Title = ({id,title})=>{
+    return <Content id={id} >{title}</Content>
 }
 
 export default Title;
