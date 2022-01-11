@@ -15,10 +15,10 @@ const Overlap = styled.div`
     display:none;
     justify-content: center;
     flex-direction: column;
-    &>p{
+    & > p{
         color:white;
     }
-    &>p:nth-of-type(1){
+    & > p:nth-of-type(1){
         font-size:18px;
         font-weight:bold;
     }
@@ -54,6 +54,22 @@ const Thumbnail = styled.div`
         margin-right:0;
     }
 `;
+
+
+<section class="a b c d">
+    <article></article>
+    <article></article>
+    <div>
+        <span>
+
+        </span>
+        <p></p>
+        <span></span>
+        <div>
+
+        </div>
+    </div>
+</section>
 
 const Collection = ({images})=>{
     return (
