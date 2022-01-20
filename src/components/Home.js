@@ -12,10 +12,12 @@ import img_5 from '../images/cuicui_2.png';
 const imgArr = [img_1,img_2,img_3,img_4,img_5];
 
 const Wrapper = styled.div`
-    width:100%;
-    height:500px;
-    overflow:hidden;
-    padding-top:180px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 180px;
+    top: 190px;
+    position: relative;
 `;
 
 const Home = (props)=>{

@@ -1,4 +1,7 @@
+import {useState} from 'react';
 import styled,{css} from 'styled-components';
+import {Modal} from 'react-bootstrap';
+import ModalBody from './ModalBody';
 
 const Wrapper = styled.div`
     display:flex;
@@ -72,11 +75,35 @@ const Thumbnail = styled.div`
 </section>
 
 const Collection = ({images})=>{
+
+    const [show, setShow] = useState(false);
+    const [content,setContent] = useState(null)
+
+    const viewDetail = (product)=>{
+        setContent(product);
+        setShow(true);
+    }
+
+    const modalCloser = ()=>{
+        setShow(false);
+        setContent(null);
+    }
     return (
         <Wrapper>
+            <Modal show={show} onHide={modalCloser} size="lg">
+                {content&&<ModalBody content={content}/>}
+                {/* <Modal.Header closeButton>
+                <Modal.Title>{content&&content.description}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div style={{overflow:'hidden',width:'100%',height:'2000px'}}>
+                        <h1>{content&&content.detail}</h1>
+                    </div>
+                </Modal.Body> */}
+            </Modal>
             {images.map((each,idx)=>
-                (<Thumbnail image={each.image} key={`thumb_${idx}`}>
-                    <Overlap>
+                (<Thumbnail image={each.thumb} key={`thumb_${idx}`}>
+                    <Overlap onClick={()=>viewDetail(each)}>
                         <p>{each.description}</p>
                         <p>{each.type}</p>
                     </Overlap>
@@ -85,5 +112,7 @@ const Collection = ({images})=>{
         </Wrapper>
     )
 }
+
+
 
 export default Collection;
