@@ -74,7 +74,7 @@ const Thumbnail = styled.div`
     </div>
 </section>
 
-const Collection = ({images})=>{
+const Collection = ({images},children)=>{
 
     const [show, setShow] = useState(false);
     const [content,setContent] = useState(null)
@@ -92,14 +92,6 @@ const Collection = ({images})=>{
         <Wrapper>
             <Modal show={show} onHide={modalCloser} size="lg">
                 {content&&<ModalBody content={content}/>}
-                {/* <Modal.Header closeButton>
-                <Modal.Title>{content&&content.description}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <div style={{overflow:'hidden',width:'100%',height:'2000px'}}>
-                        <h1>{content&&content.detail}</h1>
-                    </div>
-                </Modal.Body> */}
             </Modal>
             {images.map((each,idx)=>
                 (<Thumbnail image={each.thumb} key={`thumb_${idx}`}>
