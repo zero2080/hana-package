@@ -4,7 +4,7 @@ const Content = styled.p`
     font-size:32px;
     font-weight:bold;
     text-align:center;
-    padding-top:150px;
+    padding-top:100px;
     margin-bottom:60px;
 `;
 

@@ -7,6 +7,14 @@ const Wrapper = styled.div`
     width:100%;
     display:flex;
     justify-content: center;
+    ${({isMobile})=>{
+        if(isMobile){
+            return `
+                flex-direction:column;
+                align-items:center;
+            `;
+        }
+    }}
 `;
 
 const IconWrapper = styled.div`
@@ -17,10 +25,10 @@ const IconWrapper = styled.div`
     margin:0 30px;
 `;
 
-const RequestChannel = ({insta,mail,kakao})=>{
+const RequestChannel = ({insta,mail,kakao,isMobile})=>{
     // TODO: 각 아이콘 클릭시 견적 요청 
     return (
-        <Wrapper>
+        <Wrapper isMobile={isMobile}>
             <IconWrapper>
                 <img src={icon_insta} alt="instagram icon"/>
                 <p>{insta}</p>

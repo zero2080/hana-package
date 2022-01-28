@@ -2,7 +2,13 @@ import styled from 'styled-components';
 import logo from '../images/introduce_logo.svg'
 
 const Wrapper = styled.div`
-    margin:0 100px 100px;
+${({isMobile})=>{
+    if(isMobile){
+        return `margin:10px;`
+    }else{
+        return `margin:0 100px 100px;`
+    }
+}}
     display:flex;
     justify-content: space-between;
 `;
@@ -10,11 +16,9 @@ const Wrapper = styled.div`
 const Thumb = styled.div`
     width:500px;
     height:500px;
-    ${({img})=>(
-        `
+    ${({img})=>(`
         background-image:url(${img});
-        `
-    )}
+    `)}
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -34,9 +38,19 @@ const Logo = styled.img`
 `;
 
 const Text = styled.div`
-    width:500px;
     line-height: 30px;
-    text-align:center;
+    ${({isMobile})=>{
+        if(isMobile){
+            return `
+            text-align:left;
+            word-break:keep-all;
+            `
+        }else{
+            return `
+            text-align:center;
+            width:500px;
+        `}
+    }}
 `;
 
 const Banner = styled.div`
@@ -77,14 +91,16 @@ const Banner = styled.div`
     display:flex;
 `;
 
-const Introduce = ({infomation})=>{
+const Introduce = ({isMobile, infomation})=>{
     return (
         <>
-            <Wrapper>
-                <Thumb img={infomation.link} />
+            <Wrapper isMobile={isMobile}>
+                {
+                    !isMobile&&<Thumb img={infomation.link} />
+                }
                 <Info>
                     <Logo src={logo} alt="회사로고"/>
-                    <Text>
+                    <Text isMobile={isMobile}>
                         {infomation.content}
                     </Text>
                 </Info>
