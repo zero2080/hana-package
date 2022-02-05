@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react';
+import {useEffect} from 'react';
 import {Carousel} from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
