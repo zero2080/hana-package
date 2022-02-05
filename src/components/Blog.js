@@ -27,11 +27,11 @@ const Thumbnail = styled.div`
     background-size:cover;
 `;
 
-const Blog = ({articles})=>{
+const Blog = ({blogs})=>{
     return (
         <Wrapper>
             {
-                articles.map((each,idx)=>{
+                blogs.map((each,idx)=>{
                     let title = each.title.length>20?`${each.title.substring(0,20)} ...`:each.title;
 
                     return (<Article key={`blog_${idx}`}>

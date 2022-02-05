@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import styled from 'styled-components';
-import {Modal} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import ModalBody from './ModalBody';
 
 const Wrapper = styled.div`
@@ -82,7 +82,7 @@ const Thumbnail = styled.div`
 
 `;
 
-const Collection = ({images},children)=>{
+const Collection = ({images})=>{
 
     const [show, setShow] = useState(false);
     const [content,setContent] = useState(null)

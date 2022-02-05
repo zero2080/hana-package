@@ -1,3 +1,4 @@
+import {useState,useEffect} from 'react';
 import NavBar from './components/NavBar';
 import { isMobile } from 'react-device-detect';
 import Home from './components/Home';
@@ -8,27 +9,22 @@ import RequestChannel from './components/RequestChannel';
 import Blog from './components/Blog';
 
 import comp_img from './images/vs.png';
-import thumb from './images/1fghjd.png';
 import bg from './images/itty.png';
 
+import collection from './api/collection';
 
 function App() {
-  const images = [
-    {thumb:thumb,detail:thumb,description:'윗줄 설명1',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명2',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명3',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명4',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명5',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명6',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명7',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명8',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명9',type:'쇼핑백'},
-    {thumb:thumb,detail:thumb,description:'윗줄 설명10',type:'쇼핑백'}
-  ]
 
-  const requestChannel = {insta:'insta',mail:'hn-package@naver.com',kakao:'kakao'};
+  const [images,setImages] = useState([]);
 
-  const articles = [
+  useEffect(()=>{
+    collection().then(data=>setImages(data));
+
+  },[]);
+
+  const requestChannel = {insta:'insta',mail:'syoping_baeg@naver.com',kakao:'kakao'};
+
+  const blogs = [
     {image:"https://s3.ap-northeast-2.amazonaws.com/hana-package.syopingbaeg.com/blog/test_tumb.png",title:'상품상품 인거시다. 예시인거시다.20글자가 넘는가?',createdAt:'2021-10-23'},
     {image:"https://s3.ap-northeast-2.amazonaws.com/hana-package.syopingbaeg.com/blog/test_tumb.png",title:'상품상품 인거시다. 예시인거시다.',createdAt:'2021-10-23'},
     {image:"https://s3.ap-northeast-2.amazonaws.com/hana-package.syopingbaeg.com/blog/test_tumb.png",title:'상품상품 인거시다. 예시인거시다.20글자가 넘는가?',createdAt:'2021-10-23'},
@@ -51,7 +47,7 @@ function App() {
       <Title id="request" title="문의"/>
       <RequestChannel {...requestChannel} isMobile={isMobile} />
       <Title id="blog" title="블로그"/>
-      <Blog articles={articles}/>
+      <Blog blogs={blogs}/>
       <footer style={{padding:isMobile?'10px':'50px',borderTop:'1px solid lightgray'}}>
         <p style={{fontWeight:'bold'}}>회사명 : HN PACKAGE</p>
         <p style={{pading:0,margin:0}}>소재지 : 경기도 파주시 소라지로 95-31 (신촌동 29-17)</p>

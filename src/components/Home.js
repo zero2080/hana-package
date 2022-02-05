@@ -1,15 +1,12 @@
+import {useState,useEffect} from 'react';
 import {Carousel} from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import img_1 from '../images/adfg.png';
-import img_2 from '../images/aefg24qt.png';
-import img_3 from '../images/afsg24g.png';
-import img_4 from '../images/aworld_.png';
-import img_5 from '../images/cuicui_2.png';
-
-const imgArr = [img_1,img_2,img_3,img_4,img_5];
+import carou_0 from '../images/1.png';
+import carou_1 from '../images/2.png';
+import carou_2 from '../images/18.png';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -34,6 +31,11 @@ const Image = styled.div`
 
 
 const Home = (props)=>{
+    const imgArr = [carou_0,carou_1,carou_2];
+
+    useEffect(()=>{
+        console.log('aa')
+    },[]);
     return (
     <Wrapper>
         <Carousel>

@@ -1,7 +1,7 @@
 import { useState,useRef} from 'react';
 import {Row,Col,Modal,Form,Button} from 'react-bootstrap';
 import styled from 'styled-components';
-import guideImg from '../images/making_guide.jpg';
+import guideImg from '../images/making_guide.png';
 
 const Wrapper = styled.div`
     width:100%;
@@ -91,8 +91,14 @@ const ModalBody = ({content})=>{
             </Modal.Header>
             <Modal.Body>
                 <Wrapper>
-                    <img src={content.detail} alt="상세 사진"/>
-                    <hr/>
+                    {
+                        content.detail.map((detail,idx)=>(
+                            <div key={`col_det_${idx}`}>
+                                <img src={detail} alt="상세 사진" style={{width:'100%'}}/>
+                                <hr/> 
+                            </div>
+                        ))
+                    }
                     <img src={guideImg} alt="제작요청 가이드 이미지"/>
                     <hr/>
                     <MailForm/>
