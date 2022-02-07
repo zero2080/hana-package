@@ -37,7 +37,7 @@ const RequestChannel = ({insta,mail,kakao,isMobile})=>{
             </IconWrapper>
             <IconWrapper>
                 <img src={icon_mail} alt="instagram icon"/>
-                <p><a href={`mailto:${mail}?subject=안녕하세요.`} target="_blank" style={{textDecoration:'none',color:'black'}}>{mail}</a></p>
+                <p><a href={`mailto:${mail}?subject=안녕하세요.`} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none',color:'black'}}>{mail}</a></p>
             </IconWrapper>
             <IconWrapper>
                 <img src={icon_kakao} alt="instagram icon"/>
