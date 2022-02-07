@@ -7,21 +7,21 @@ import Collection from './components/Collection';
 import Introduce from './components/Introduce';
 import RequestChannel from './components/RequestChannel';
 import Blog from './components/Blog';
-
 import comp_img from './images/vs.png';
 import bg from './images/itty.png';
-
 import collection from './api/collection';
+
+const {REACT_APP_API_PATH} = process.env;
 
 function App() {
 
-  const keyDi = '${{secrets.AWS_ACCESS_KEY_ID}}';
   const [images,setImages] = useState([]);
 
-  console.log(keyDi);
+  console.log(process.env);
+  console.log(REACT_APP_API_PATH);
   
   useEffect(()=>{
-    collection().then(data=>setImages(data));
+    collection().then(setImages);
   },[]);
 
   const requestChannel = {insta:'@syopingbaeg_',mail:'syoping_baeg@naver.com',kakao:'kakao'};
