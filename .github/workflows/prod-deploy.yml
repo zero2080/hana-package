@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          REACT_APP_API_PATH : ${{secrets.AWS_ACCESS_KEY_ID}}
+          REACT_APP_API_PATH : ${{secrets.REACT_APP_API_PATH}}
       - name: Print
         run: echo -e "`ls -als`\n" 
       - name: Deploy to S3

@@ -33,9 +33,6 @@ const Image = styled.div`
 const Home = (props)=>{
     const imgArr = [carou_0,carou_1,carou_2];
 
-    useEffect(()=>{
-        console.log('aa')
-    },[]);
     return (
     <Wrapper>
         <Carousel>

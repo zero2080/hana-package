@@ -1,5 +1,4 @@
-// const API_PATH = 'http://localhost:8080';
-const API_PATH = 'https://hana-api.syopingbaeg.com';
+const API_PATH = process.env.REACT_APP_API_PATH;
 
 function request(option){
     return fetch(API_PATH+option.url,{
