@@ -29,13 +29,15 @@ const RequestChannel = ({insta,mail,kakao,isMobile})=>{
     // TODO: 각 아이콘 클릭시 견적 요청 
     return (
         <Wrapper isMobile={isMobile}>
-            <IconWrapper>
+            <IconWrapper onClick={()=>{
+                window.open('https://www.instagram.com/syopingbaeg_/');
+            }}>
                 <img src={icon_insta} alt="instagram icon"/>
                 <p>{insta}</p>
             </IconWrapper>
             <IconWrapper>
                 <img src={icon_mail} alt="instagram icon"/>
-                <p>{mail}</p>
+                <p><a href={`mailto:${mail}?subject=안녕하세요.`} target="_blank" style={{textDecoration:'none',color:'black'}}>{mail}</a></p>
             </IconWrapper>
             <IconWrapper>
                 <img src={icon_kakao} alt="instagram icon"/>

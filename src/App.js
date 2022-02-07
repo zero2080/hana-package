@@ -19,10 +19,9 @@ function App() {
 
   useEffect(()=>{
     collection().then(data=>setImages(data));
-
   },[]);
 
-  const requestChannel = {insta:'insta',mail:'syoping_baeg@naver.com',kakao:'kakao'};
+  const requestChannel = {insta:'@syopingbaeg_',mail:'syoping_baeg@naver.com',kakao:'kakao'};
 
   const blogs = [
     {image:"https://s3.ap-northeast-2.amazonaws.com/hana-package.syopingbaeg.com/blog/test_tumb.png",title:'상품상품 인거시다. 예시인거시다.20글자가 넘는가?',createdAt:'2021-10-23'},
