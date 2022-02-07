@@ -11,15 +11,10 @@ import comp_img from './images/vs.png';
 import bg from './images/itty.png';
 import collection from './api/collection';
 
-const {REACT_APP_API_PATH} = process.env;
-
 function App() {
 
   const [images,setImages] = useState([]);
 
-  console.log(process.env);
-  console.log(REACT_APP_API_PATH);
-  
   useEffect(()=>{
     collection().then(setImages);
   },[]);
