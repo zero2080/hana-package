@@ -15,8 +15,11 @@ import collection from './api/collection';
 
 function App() {
 
+  const keyDi = '${{secrets.AWS_ACCESS_KEY_ID}}';
   const [images,setImages] = useState([]);
 
+  console.log(keyDi);
+  
   useEffect(()=>{
     collection().then(data=>setImages(data));
   },[]);
