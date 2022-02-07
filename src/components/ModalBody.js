@@ -31,7 +31,7 @@ const MailForm = ({sample})=>{
         let em = e.currentTarget.value;
         if(em.trim()===''){
             setEmailValidMessageset('이메일을 입력해 주세요.');
-        }else if(!/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/.test(em)){
+        }else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/.test(em)){
             setEmailValidMessageset('이메일 형식이 아닙니다.');
         }
     }
@@ -53,7 +53,7 @@ const MailForm = ({sample})=>{
 
         if(email.length===0){
             setEmailValidMessageset('이메일을 입력해 주세요.');
-        }else if(!/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/.test(email)){
+        }else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/.test(email)){
             console.warn('e2')
             setEmailValidMessageset('이메일 형식이 아닙니다.');
         }else{
