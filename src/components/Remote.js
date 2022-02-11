@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import icon_kakao from '../images/kakao.svg';
 
-const Wrapper = ({isMobile,children})=>{
+const Wrapper = ({isMobile,onClick,children})=>{
     const webStyle = {width:'150px',height:'150px',right:'100px',bottom:'100px'};
     const mobileStyle= {width:'80px',height:'80px',right:'20px',bottom:'20px'};
 
     return (
-        <Base style={isMobile?mobileStyle:webStyle}>
+        <Base onClick={onClick} style={isMobile?mobileStyle:webStyle}>
             {children}
         </Base>
     )
