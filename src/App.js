@@ -7,7 +7,7 @@ import Collection from './components/Collection';
 import Introduce from './components/Introduce';
 import RequestChannel from './components/RequestChannel';
 import Blog from './components/Blog';
-
+import Remote from './components/Remote'
 import comp_img from './images/vs.png';
 import bg from './images/itty.png';
 
@@ -54,6 +54,7 @@ function App() {
         <p style={{padding:0,margin:0}}>포장상자 제작(칼라박스,싸바리박스,카톤박스)</p>
         <br/>
       </footer>
+      <Remote isMobile={isMobile} />
     </div>
   );
 }

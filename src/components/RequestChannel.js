@@ -35,11 +35,15 @@ const RequestChannel = ({insta,mail,kakao,isMobile})=>{
                 <img src={icon_insta} alt="instagram icon"/>
                 <p>{insta}</p>
             </IconWrapper>
-            <IconWrapper>
+            <IconWrapper onClick={()=>{
+                window.open(`mailto:${mail}?subject=견적 문의.`)
+            }}>
                 <img src={icon_mail} alt="instagram icon"/>
-                <p><a href={`mailto:${mail}?subject=안녕하세요.`} style={{textDecoration:'none',color:'black'}}>{mail}</a></p>
+                <p>{mail}</p>
             </IconWrapper>
-            <IconWrapper>
+            <IconWrapper onClick={()=>{
+                window.open('https://open.kakao.com/o/steBeRYd');
+            }}>
                 <img src={icon_kakao} alt="instagram icon"/>
                 <p>{kakao}</p>
             </IconWrapper>
