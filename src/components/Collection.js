@@ -82,8 +82,7 @@ const Thumbnail = styled.div`
 
 `;
 
-const Collection = ({images})=>{
-
+const Collection = ({collections})=>{
     const [show, setShow] = useState(false);
     const [content,setContent] = useState(null)
 
@@ -102,7 +101,7 @@ const Collection = ({images})=>{
                 <Modal show={show} onHide={modalCloser} size="lg">
                     {content&&<ModalBody content={content}/>}
                 </Modal>
-                {images.map((each,idx)=>(
+                {collections.map((each,idx)=>(
                     <Thumbnail className="jong-thumb" image={each.thumb} key={`thumb_${idx}`}>
                         <Overlap onClick={()=>viewDetail(each)}>
                             <p>{each.description}</p>
@@ -117,7 +116,7 @@ const Collection = ({images})=>{
                 <Modal show={show} onHide={modalCloser} size="lg">
                     {content&&<ModalBody content={content}/>}
                 </Modal>
-                {images.map((each,idx)=>(
+                {collections.map((each,idx)=>(
                     <Thumbnail className="jong-thumb" image={each.thumb} key={`thumb_${idx}`}>
                         <Overlap onClick={()=>viewDetail(each)}>
                             <p>{each.description}</p>

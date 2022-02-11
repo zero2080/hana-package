@@ -25,19 +25,6 @@ const Base = styled.div`
     flex-direction: column;
     `;
 
-const MobileWrapper = styled.div`
-    width:80px;
-    height:80px;
-    right:20px;
-    bottom:20px;
-    &>img{
-        width: 50%;
-    }
-    &>p{
-        font-size:0.8em;
-    }
-`;
-
 const Remote = ({isMobile})=>{
     const openKakao = ()=>{
         window.open('https://open.kakao.com/o/steBeRYd');
