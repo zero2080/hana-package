@@ -35,7 +35,7 @@ const Blog = ({blogs})=>{
                     let title = each.title.length>20?`${each.title.substring(0,20)} ...`:each.title;
 
                     return (<Article key={`blog_${idx}`}>
-                        <Thumbnail image={each.image}/>
+                        <Thumbnail image={each.link}/>
                         <p>{title}</p>
                         <p>{each.createdAt}</p>
                     </Article>)
