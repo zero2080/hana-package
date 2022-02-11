@@ -14,12 +14,13 @@ import collection from './api/collection';
 
 function App() {
 
+  const [topImages,setTopImages] = useState([]);
   const [collections,setCollections] = useState([]);
   const [blogs,setBlogs] = useState([]);
 
-
   useEffect(()=>{
     collection().then(data=>{
+      setTopImages(data.topImages);
       setCollections(data.collections);
       setBlogs(data.blogs);
     });
@@ -32,7 +33,7 @@ function App() {
   return (
     <div className="App" style={{width:isMobile?undefined:"1280px",margin:"0 auto",overflow:'hidden'}}>
       <NavBar/>
-      <Home/>
+      <Home topImages={topImages}/>
       <Title id="collection" title="컬렉션"/>
       <Collection collections={collections} />
       <Title id="introduce" title="소개"/>

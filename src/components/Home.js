@@ -3,10 +3,6 @@ import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import carou_0 from '../images/1.png';
-import carou_1 from '../images/2.png';
-import carou_2 from '../images/18.png';
-
 const Wrapper = styled.div`
     width: 100%;
     height: 500px;
@@ -29,14 +25,12 @@ const Image = styled.div`
     `;
 
 
-const Home = (props)=>{
-    const imgArr = [carou_0,carou_1,carou_2];
-
+const Home = ({topImages})=>{
     return (
     <Wrapper>
         <Carousel>
             {
-                imgArr.map((img,idx)=>{
+                topImages.map((img,idx)=>{
                     return (
                         <Carousel.Item key={`img_${idx}`}>
                             <Image img={img}/>

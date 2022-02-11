@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {format} from 'date-fns';
 
 const Wrapper = styled.div`
     display:flex;
@@ -37,7 +38,7 @@ const Blog = ({blogs})=>{
                     return (<Article key={`blog_${idx}`}>
                         <Thumbnail image={each.link}/>
                         <p>{title}</p>
-                        <p>{each.createdAt}</p>
+                        <p>{format(new Date(each.createdAt),'yyyy-MM-dd')}</p>
                     </Article>)
                 })
             }
