@@ -30,14 +30,23 @@ const Thumbnail = styled.div`
 
 const Blog = ({blogs})=>{
     const onClick=(target)=>{
-        window.open(target);
+        let protocol = window.location.protocol;
+        
+        let url = '';
+        if(target.indexOf("//")>0){
+            url = `${protocol}${target.substring(target.indexOf('//'))}`;
+            window.open(url);
+        }else{
+            url = `${protocol}//${target}`;
+            window.open(url);
+        }
+
     }
     return (
         <Wrapper>
             {
                 blogs.map((each,idx)=>{
                     let title = each.title.length>20?`${each.title.substring(0,20)} ...`:each.title;
-
                     return (<Article key={`blog_${idx}`} onClick={()=>onClick(each.target)}>
                         <Thumbnail image={each.link}/>
                         <p>{title}</p>
