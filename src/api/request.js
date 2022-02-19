@@ -1,6 +1,5 @@
 
 const API_PATH ='https://hana-api.syopingbaeg.com';
-// const API_PATH ='http://localhost:8080';
 
 const request = async (option)=>{
     let token = sessionStorage.getItem('accessToken');

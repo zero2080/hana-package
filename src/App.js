@@ -20,7 +20,6 @@ const FileInput = ({className})=>{
 
 function App() {
 
-  console.log(API_PATH)
   const [logined,setLogined] = useState(false);
   const [top,setTop] = useState([]);
   const [collection,setCollection] = useState([]);
