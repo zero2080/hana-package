@@ -29,13 +29,16 @@ const Thumbnail = styled.div`
 `;
 
 const Blog = ({blogs})=>{
+    const onClick=(target)=>{
+        window.open(target);
+    }
     return (
         <Wrapper>
             {
                 blogs.map((each,idx)=>{
                     let title = each.title.length>20?`${each.title.substring(0,20)} ...`:each.title;
 
-                    return (<Article key={`blog_${idx}`}>
+                    return (<Article key={`blog_${idx}`} onClick={()=>onClick(each.target)}>
                         <Thumbnail image={each.link}/>
                         <p>{title}</p>
                         <p>{format(new Date(each.createdAt),'yyyy-MM-dd')}</p>
