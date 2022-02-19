@@ -46,6 +46,8 @@ function App() {
         <p style={{fontWeight:'bold'}}>회사명 : HN PACKAGE</p>
         <p style={{pading:0,margin:0}}>소재지 : 경기도 파주시 소라지로 95-31 (신촌동 29-17)</p>
         <p style={{padding:0,margin:0}}>주요사업 : 쇼핑백제작 (종이가방)</p>
+        <p style={{padding:0,margin:0}}>사업자 번호 : 406-37-01071</p>
+        <p style={{padding:0,margin:0}}>통신판매업 신고번호 : 제 2022-경기파주-0517 호</p>
         <p style={{padding:0,margin:0}}>포장상자 제작(칼라박스,싸바리박스,카톤박스)</p>
         <br/>
       </footer>
