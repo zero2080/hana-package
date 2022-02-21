@@ -352,7 +352,7 @@ function App() {
                 
                 request({url:'/admin/profile',method:'PUT',body:body}).then(res=>{
                   if(res.ok){
-                    alter('비밀번호변경이 완료되었습니다.');
+                    alert('비밀번호변경이 완료되었습니다.');
                   }else{
                     console.log(res);
                     res.json().then(data=>{
