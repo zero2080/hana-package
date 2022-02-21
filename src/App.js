@@ -31,6 +31,10 @@ function App() {
   const [blogTitle,setBlogTitle] = useState('');
   const [blogLink,setBlogLink] = useState('');
   
+  const [adminBefore,setAdminBefore] = useState('');
+  const [adminAfter,setAdminAfter] = useState('');
+  const [pwdValidated,setPwdValidated] = useState(false);
+  
   const topRef = useRef();
   const blogRef = useRef();
 
@@ -300,6 +304,67 @@ function App() {
               />
             </InputGroup>
             <input type="button" onClick={uploadBlog} value="업로드" />
+          </section>
+          <hr/>
+          <h1>계정관리</h1>
+          <section>
+            <InputGroup>
+              <InputGroup.Text id="adminInputBefore">기존 비밀번호</InputGroup.Text>
+              <FormControl
+                type="password"
+                placeholder="기존 비밀번호"
+                aria-label="before password"
+                aria-describedby="adminInputBefore"
+                value={adminBefore} onChange={(e)=>setAdminBefore(e.target.value)}
+              />
+            </InputGroup>
+            <InputGroup>
+              <InputGroup.Text id="adminInputAfter">변경할 비밀번호</InputGroup.Text>
+              <FormControl
+                type="password"
+                placeholder="변경할 비밀번호"
+                aria-label="after password"
+                aria-describedby="adminInputAfter"
+                value={adminAfter}
+                onChange={(e)=>setAdminAfter(e.target.value)}
+              />
+            </InputGroup>
+            <InputGroup>
+              <InputGroup.Text id="adminInputCheck">비밀번호 확인</InputGroup.Text>
+              <FormControl
+                type="password"
+                placeholder="변경할 비밀번호 확인"
+                aria-label="change password check"
+                aria-describedby="adminInputCheck"
+                onChange={(e)=>{
+                  let chkPwd = e.target.value;
+                  if(chkPwd===adminAfter){
+                    setPwdValidated(true);
+                  }else{
+                    setPwdValidated(false);
+                  }
+                }}
+              />
+            </InputGroup>
+            <Button onClick={()=>{
+              if(pwdValidated){
+                let body = {before:adminBefore,after:adminAfter};
+                
+                request({url:'/admin/profile',method:'PUT',body:body}).then(res=>{
+                  if(res.ok){
+                    alter('비밀번호변경이 완료되었습니다.');
+                  }else{
+                    console.log(res);
+                    res.json().then(data=>{
+                      console.log(data);
+                    })
+                  }
+                })
+                console.log(body);
+              }else{
+                alert('비밀번호를 확인해 주세요.');
+              }
+            }}>비밀번호 변경</Button>
           </section>
         </article>
       </Container>
