@@ -130,7 +130,7 @@ function App() {
       body:formData}).then(res=>{
         console.log(res);
         if(res.ok){
-          alert('업로그가 완료되었습니다.');
+          alert('업로드가 완료되었습니다.');
           window.location.reload();
         }
       }).catch(e=>{
@@ -167,7 +167,7 @@ function App() {
 
     formData.append('file',file,file.name);
 
-    await fetch(`${API_PATH}/admin/${type}`,{
+    await fetch(`${API_PATH}/admin/introduce/${type}`,{
       method:'PUT',
       headers:new Headers({'accept':'application/json','Authorization':sessionStorage.getItem('accessToken')}),
       body:formData}).then(res=>{
