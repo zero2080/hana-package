@@ -37,6 +37,8 @@ function App() {
   
   const topRef = useRef();
   const blogRef = useRef();
+  const introProdRef = useRef();
+  const introBgRef = useRef();
 
   const onSubmit=(e)=>{
     e.preventDefault();
@@ -111,6 +113,7 @@ function App() {
         console.error(e);
       });
   }
+
   const uploadCollection = async ()=>{
     let formData = new FormData();
 
@@ -157,6 +160,26 @@ function App() {
         console.error(e);
       });
   }
+
+  const uploadIntroduce = (type)=>{
+    let formData = new FormData();
+    let file = introProdRef.current.files[0];
+
+    formData.append('file',file,file.name);
+
+    await fetch(`${API_PATH}/admin/${type}`,{
+      method:'PUT',
+      headers:new Headers({'accept':'application/json','Authorization':sessionStorage.getItem('accessToken')}),
+      body:formData}).then(res=>{
+        console.log(res);
+        if(res.ok){
+          alert('파일 변경 완료');
+        }
+      }).catch(e=>{
+        console.error(e);
+      });
+  }
+
   return <Wrapper>
     {logined?(
       <Container>
@@ -253,6 +276,20 @@ function App() {
               </div>
             </div>
             <Button onClick={uploadCollection} >업로드</Button>
+          </section>
+          <hr/>
+          <h1>소개 </h1>
+          <section>
+            <article>
+              <h2>소개 좌측 샘플이지미</h2>
+              <input type="file" ref={introProdRef}/>
+              <input type="button" onClick={()=>uploadIntroduce('product')} value="업로드" />
+            </article>
+            <article>
+              <h2>소개 백그라운드</h2>
+              <input type="file" ref={introBgRef}/>
+              <input type="button" onClick={()=>uploadIntroduce('background')} value="업로드" />
+            </article>
           </section>
           <hr/>
           <h1>블로그</h1>
