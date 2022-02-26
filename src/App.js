@@ -161,7 +161,7 @@ function App() {
       });
   }
 
-  const uploadIntroduce = (type)=>{
+  const uploadIntroduce = async (type)=>{
     let formData = new FormData();
     let file = introProdRef.current.files[0];
 
