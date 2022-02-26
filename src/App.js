@@ -281,7 +281,7 @@ function App() {
           <h1>소개 </h1>
           <section>
             <article>
-              <h2>소개 좌측 샘플이지미</h2>
+              <h2>소개 좌측 샘플이미지</h2>
               <input type="file" ref={introProdRef}/>
               <input type="button" onClick={()=>uploadIntroduce('product')} value="업로드" />
             </article>
