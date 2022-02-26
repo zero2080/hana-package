@@ -35,7 +35,7 @@ function App() {
       <Title id="collection" title="컬렉션"/>
       <Collection collections={collections} />
       <Title id="introduce" title="소개"/>
-      <Introduce isMobile={isMobile} infomation={{link:'/img/intro_product.png',background:'/img/background.png',content:'패키지는 제품과 소비자 사이에 매개체 역할을 하며, 제품의 독특한 브랜드 이미지를 형성하거나 유사 경쟁 제품 사이에서 차별화가 필요한 경우 매우 효과적입니다. 강력한 브랜드 이미지 정립은 다른 제품과의 가격 경쟁에서 보호받을 수 있고, 판매촉직을 유도해 효과적인 마케팅 도구가 됩니다. 제품을 브랜딩하고 패키지에 투자하는 것은 사업  수준을 한 단계 높여주고 제품에 대한 고객들의 호감과 구매의 만족도를 더욱 높여주는 역할을 하고 있습니다.'}} />
+      <Introduce isMobile={isMobile} infomation={{link:'/img/aaaaaa01-aaaa-aaaa-aaaa-aaaaaaaaaa00',background:'/img/aaaaaa01-aaaa-aaaa-aaaa-aaaaaaaaaa01',content:'패키지는 제품과 소비자 사이에 매개체 역할을 하며, 제품의 독특한 브랜드 이미지를 형성하거나 유사 경쟁 제품 사이에서 차별화가 필요한 경우 매우 효과적입니다. 강력한 브랜드 이미지 정립은 다른 제품과의 가격 경쟁에서 보호받을 수 있고, 판매촉직을 유도해 효과적인 마케팅 도구가 됩니다. 제품을 브랜딩하고 패키지에 투자하는 것은 사업  수준을 한 단계 높여주고 제품에 대한 고객들의 호감과 구매의 만족도를 더욱 높여주는 역할을 하고 있습니다.'}} />
       <Title id="request" title="문의"/>
       <RequestChannel {...requestChannel} isMobile={isMobile} />
       <Title id="blog" title="블로그"/>
