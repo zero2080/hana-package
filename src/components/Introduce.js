@@ -63,31 +63,6 @@ const Banner = styled.div`
         background-image:url(${bgImage});
     `}
 
-    &>div{
-        background-color:#000000dd;
-        width:100%;
-        height:100%;
-        text-align:right;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-
-        &>p:nth-of-type(1){
-            font-size:60px;
-            color:white;
-            padding-right:90px;
-        }
-        &>p:nth-of-type(2){
-            font-size:24px;
-            color:#A399B3;
-            padding-right:100px;
-        }
-        &>p:nth-of-type(3){
-            font-size:24px;
-            color:#4E647B;
-            padding-right:100px;
-        }
-    }
     display:flex;
 `;
 
@@ -106,13 +81,7 @@ const Introduce = ({isMobile, infomation})=>{
                 </Info>
 
             </Wrapper>
-            <Banner bgImage={infomation.background}>
-                <div>
-                    <p>HN PACKAGE</p>
-                    <p>맞춤 쇼핑백 제작</p>
-                    <p>인쇄 제작 전문</p>
-                </div>
-            </Banner>
+            <Banner bgImage={infomation.background}/>
         </>
     );
 }
