@@ -104,12 +104,12 @@ const MailForm = ({sample})=>{
                     <Form.Control type="number" ref={widthRef} min={0}/>
                 </Form.Group>
                 <Form.Group as={Col}>
-                    <Form.Label>세로</Form.Label>
-                    <Form.Control type="number" ref={heightRef} min={0}/>
-                </Form.Group>
-                <Form.Group as={Col}>
                     <Form.Label>옆면(폭)</Form.Label>
                     <Form.Control type="number" ref={depthRef} min={0}/>
+                </Form.Group>
+                <Form.Group as={Col}>
+                    <Form.Label>세로</Form.Label>
+                    <Form.Control type="number" ref={heightRef} min={0}/>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
