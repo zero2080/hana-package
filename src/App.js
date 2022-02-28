@@ -163,7 +163,7 @@ function App() {
 
   const uploadIntroduce = async (type)=>{
     let formData = new FormData();
-    let file = introProdRef.current.files[0];
+    let file = type==='product'?introProdRef.current.files[0]:introBgRef.current.files[0];
 
     formData.append('file',file,file.name);
 
