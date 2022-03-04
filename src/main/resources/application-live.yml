@@ -5,8 +5,8 @@ spring:
       minimum-idle: 20
       maximum-pool-size: 50
       jdbc-url: jdbc:mysql://server-db.c9vq7tfs4ivu.ap-northeast-2.rds.amazonaws.com:3306/hn-package?characterEncoding=UTF-8&useSSL=false
-      username: blackbear2080
-      password: dhqjatn0732
+      username: ${AWS_RDS_USERNAME}
+      password: ${AWS_RDS_PASSWORD}
   flyway:
     locations: classpath:db/data/common, classpath:db/data/live
 
