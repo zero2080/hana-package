@@ -1,5 +1,5 @@
 # README
- [하나패키지](https://hana-package.syopingbaeg.com) 의 백/프론트 레파지토리
+ [하나패키지](https://hana-package.syopingbaeg.com) 의 백/프론트 레파지토리 </br>
  개인 프로젝트겸 외주 작업으로 깃플로우는 적용하지 않았으며 대부분 Rebase Merge를 통해 한 브랜치에 통합하며 작업되었음
  
  ## Branch
