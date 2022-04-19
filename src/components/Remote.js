@@ -27,7 +27,7 @@ const Base = styled.div`
 
 const Remote = ({isMobile})=>{
     const openKakao = ()=>{
-        window.open('https://open.kakao.com/o/steBeRYd');
+        window.open('http://pf.kakao.com/_pJPRb/chat');
     }
     return (
         <Wrapper isMobile={isMobile} onClick={openKakao}>
