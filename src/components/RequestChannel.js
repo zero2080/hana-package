@@ -42,7 +42,7 @@ const RequestChannel = ({insta,mail,kakao,isMobile})=>{
                 <p>{mail}</p>
             </IconWrapper>
             <IconWrapper onClick={()=>{
-                window.open('https://open.kakao.com/o/steBeRYd');
+                window.open('http://pf.kakao.com/_pJPRb/chat');
             }}>
                 <img src={icon_kakao} alt="instagram icon"/>
                 <p>{kakao}</p>
