@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_PATH =process.env.REACT_APP_API_PATH;
+const API_PATH = process.env.REACT_APP_API_PATH;
 
 const login = (user) => {
   return axios.post(`${API_PATH}/admin/authenticate`, user).then((resp) =>{

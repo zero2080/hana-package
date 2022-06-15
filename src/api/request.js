@@ -1,5 +1,5 @@
 
-const API_PATH ='https://hana-api.syopingbaeg.com';
+const API_PATH = process.env.REACT_APP_API_PATH;
 
 const request = async (option)=>{
     let token = sessionStorage.getItem('accessToken');
